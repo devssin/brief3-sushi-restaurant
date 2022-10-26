@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proza Libre', sans-serif;
+}
+@font-face {
+    font-family: viner;
+    src:url("../font/VINERITC.TTF");
+}
+:root {
+    --main-bg-color: #C5F0FF;
+    --sec-bg-color: #FFDBC7;
+    --nav-bg-color: #faa679;
+    --primary-color: #FF2149;
+    --text-color: #2B2B2B;
+}
+html{
+    font-size: 10px;
+    color: var(--text-color);
+}
+body{
+    background-color: var(--main-bg-color);
+}
+
+main{
+    padding: 2rem 5rem;
+    
+    min-height: 80vh;
+    position: relative;
+}
+/* main::after{
+    content: '';
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    background: url('../img/wave.png');
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+} */
+.shapediv13{
+    transform: rotate(180deg);
+    margin-bottom: -.5rem;
+    
+}
+.hero{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left , .right{
+    flex: 1;
+}
+.left h1{
+    font-size: 3.2rem;
+
+}
+.left h1 span{
+    font-family: viner , sans-serif;
+}
+.left h1 span span{
+    color: var(--primary-color);
+}
+.left p{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+
+}
+.ctas{
+    margin-top: 1.5rem;
+}
+.ctas button{
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    transition: all .5s ease;
+}
+
+.cta-main{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+
+}
+.cta-main:hover{
+    background-color: transparent;
+    
+    color: var(--primary-color);
+    box-shadow: 2px 1px 6px var(--primary-color);
+}
+.cta-sec{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.cta-sec:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 2px 1px 6px var(--primary-color);
+
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+}
+.right img {
+    width: 80%;
+}
+
+.services-section{
+    padding: 3rem 5rem;
+    background-color: var(--sec-bg-color);
+    min-height: 100vh;
+}
+.services-section h2{
+    font-size: 2.4rem;
+    text-align: center;
+    font-weight: 900;
+}
+.services-section h5{
+    font-size: 1.6rem;
+    text-align: center;
+    font-family: viner;
+    letter-spacing: .2rem;
+}
+.services{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-content: center;
+    margin-top: 6rem;
+}
+.row2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row2 img{
+    width: 70%;
+}
+
+.row1 .service, .row3 .service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    
+}
+.row1 .service{
+    align-items: flex-end;
+}
+.row1 .service p{
+    text-align: end;
+}
+.row3 .service{
+    align-items: flex-start;
+}
+.service h4{
+    font-size: 1.8rem;
+}
+.service p{
+    font-size: 1.6rem;
+}
+.service h4,p{
+    margin-top: 1rem;
+
+}
+.service span{
+    color: var(--primary-color);
+}
+
+
+@media only screen and (max-width: 800px){
+    
+    .ctas{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .ctas button{
+        font-size: 1rem;
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .services-section{
+        margin-bottom: 6vh;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+    .row1, .service {
+        align-items: center;
+    }
+    .row3 , .service{
+        align-items: center !important;
+    }
+    .row3 .service h4{
+        text-align: center !important;
+    }
+    .row1 .service p{
+        text-align: center;
+    }
+    .row3 .service p{
+        text-align: center;
+    }
+    .row2{
+        display: none;
+    }
+    
+    .cart-section{
+        min-width: 90vw !important;
+    }
+    .item{
+        font-size: 1rem;
+    }
+    .item img{
+        width: 4rem;
+    }
+}

@@ -1,0 +1,101 @@
+:root {
+    --main-bg-color: #C5F0FF;
+    --sec-bg-color: #FFDBC7;
+    --nav-bg-color: #faa679;
+    --primary-color: #FF2149;
+    --text-color: #2B2B2B;
+}
+footer{
+    padding: 3rem 6rem;
+}
+
+.bg-sec{
+    background-color: var(--sec-bg-color);
+}
+.main-footer{
+    display: flex;
+    justify-content:space-between ;
+    gap: 2rem;
+}
+
+.sitemap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-logo img{
+    width: 20rem;
+}
+.text-logo p{
+    font-size: 1.6rem;
+}
+.sitemap h3, .contact-infos h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.sitemap a{
+    text-align: start;
+    margin-bottom: 1rem;
+}
+.contact-infos {
+    font-size: 1.6rem;
+}
+.contact-infos p{
+    margin-bottom: 3rem;
+}
+.contact-infos i{
+    margin-right: 1rem;
+}
+.text-logo,.sitemap,.contact-infos{
+    flex: 1;
+}
+
+.sec-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 2rem 0;
+}
+.sec-footer p i {
+    margin-right: 1rem;
+}
+.social a{
+    margin-left: 3rem;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.copyright span{
+    font-family: viner;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 800px){
+    footer{
+        margin-bottom: 10vh;
+
+        padding: 2rem 3rem !important;
+    }
+    .main-footer{
+        flex-direction: column;
+    }
+    .text-logo .sitemap .contact-infos{
+        margin-bottom: 2rem;
+    }
+    .main-footer .sitemap{
+        align-items: flex-start;
+    }
+    .sec-footer{
+        flex-direction: column;
+        
+    }
+
+    .social{
+        display: flex;
+        justify-content: space-between;
+    }
+}

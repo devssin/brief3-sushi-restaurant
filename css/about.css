@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Proza Libre', sans-serif;
+}
+@font-face {
+    font-family: viner;
+    src:url("../font/VINERITC.TTF");
+}
+:root {
+    --main-bg-color: #C5F0FF;
+    --sec-bg-color: #FFDBC7;
+    --nav-bg-color: #faa679;
+    --primary-color: #FF2149;
+    --text-color: #2B2B2B;
+}
+body{
+    background-color: var(--main-bg-color);
+
+}
+html{
+    font-size: 10px;
+    color: var(--text-color);
+}
+
+main{
+    background-color: var(--sec-bg-color);
+    min-height: 50vh;
+    position: relative;
+    padding: 2rem 5rem;
+
+}
+
+.title-section{
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-section h1{
+    font-size: 3.2rem;
+}
+
+.about-section{
+    padding: 3rem 5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.img,.content{
+
+    flex: 1
+}
+.content h3{
+    font-family: viner;
+    font-size: 2.4rem;
+}
+.content p{
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin-top: 2rem;
+}
+.content .cta-main{
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    margin-top: 2rem;
+    transition: all .5s ease;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+
+}
+
+.cta-main:hover{
+    background-color: transparent;
+    
+    color: var(--primary-color);
+    box-shadow: 2px 1px 6px var(--primary-color);
+}
+
+.img img{
+    width: 80%;
+    height: 80%;
+}
+
+
+.team-section{
+    padding: 5rem 5rem;
+    background-color: var(--sec-bg-color);
+    margin-top: -.5rem;
+    text-align: center;
+}
+
+.team-section h2{
+    font-size: 2.4rem;
+    font-family: viner;
+}
+
+.team-section p{
+    font-size: 1.6rem;
+}
+.team{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.team img{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+.team h4{
+    font-family: viner;
+    font-size: 2rem;
+}
+.team p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .about-section,.team-section{
+        padding: 10rem 6rem;
+        
+    }
+    .about-section{
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+    .img img{
+        width: 100%;
+    }
+
+
+    
+}

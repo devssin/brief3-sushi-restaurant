@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Proza Libre", sans-serif;
+}
+@font-face {
+  font-family: viner;
+  src: url("../font/VINERITC.TTF");
+}
+:root {
+  --main-bg-color: #c5f0ff;
+  --sec-bg-color: #ffdbc7;
+  --nav-bg-color: #faa679;
+  --primary-color: #ff2149;
+  --text-color: #2b2b2b;
+}
+body {
+  background-color: var(--main-bg-color);
+}
+html {
+  font-size: 10px;
+  color: var(--text-color);
+}
+
+main {
+  background-color: var(--sec-bg-color);
+  min-height: 50vh;
+  position: relative;
+  padding: 2rem 5rem;
+}
+
+.title-section {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-section h1 {
+  font-size: 3.2rem;
+}
+
+.menu-section {
+  padding: 6rem 5rem;
+}
+.categories-container {
+  margin-bottom: 15rem;
+  display: flex;
+  align-items: center;
+}
+
+.categories-container p {
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+.categories-container select {
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  border-radius: 0.5rem;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 2fr));
+  gap: 9rem;
+  place-items: center;
+}
+.product {
+  padding: 4rem 3rem;
+  background-color: var(--sec-bg-color);
+  border-radius: 2.5rem;
+  position: relative;
+  width: 80%;
+}
+.product img {
+  position: absolute;
+  width: 10rem;
+  top: -40%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+.product-info {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.product-info p {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.rating {
+  color: var(--primary-color);
+}
+.chose-qte {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.chose-qte button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chose-qte button:hover {
+  transform: scale(1.1);
+}
+
+.cta-main {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  svg {
+    margin-bottom: 9vh;
+  }
+}
