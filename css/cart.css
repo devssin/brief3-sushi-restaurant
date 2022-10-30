@@ -11,6 +11,7 @@
   overflow-y: scroll;
   transform: translateX(110%);
   transition: all 0.5s ease-in-out;
+  z-index: 1000;
 }
 .open-cart {
   transform: translateX(0);
@@ -41,19 +42,19 @@
   width: 6rem;
 }
 .delete {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0.5rem;
   right: 1rem;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: all .4s ease;
+}
+.delete:hover{
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .total {

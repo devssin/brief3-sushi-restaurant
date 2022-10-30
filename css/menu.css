@@ -117,18 +117,53 @@ main {
 
 .chose-qte button:hover {
   transform: scale(1.1);
+  background-color: #a80724;
+
 }
 
 .cta-main {
   padding: 1rem 2rem;
   background-color: var(--primary-color);
   color: #fff;
-  border: 1px solid var(--primary-color);
+  border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+.cta-main:hover{
+  background-color: #a80724;
+  transform: scale(1.06);
+
+}
+
+.toast{
+  background-color: aquamarine;
+  width: 30vw;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  position: fixed;
+  top: 80vh;
+  left: 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.434);
+  transform: translateX(-115%);
+  transition: all .8s ease;
+}
+
+.show-toast{
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 800px) {
   svg {
     margin-bottom: 9vh;
+  }
+  .toast{
+    width: 70vw;
+    padding: 2rem 2rem;
   }
 }
