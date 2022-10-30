@@ -147,21 +147,32 @@ addToCartBtns.forEach((btn, index) => {
    
   })
 })
-const deleteBtns = document.querySelectorAll('.delete')
-console.log(deleteBtns)
+// const deleteBtns = document.querySelectorAll('.delete')
+// console.log(deleteBtns)
 
-deleteBtns.forEach((btn, i) => {
-  btn.addEventListener('click', (e) => {
-    const id = parseInt(e.target.parentNode.childNodes[1].value)
+// deleteBtns.forEach((btn, i) => {
+//   btn.addEventListener('click', (e) => {
+//     const id = parseInt(e.target.parentNode.childNodes[1].value)
+//     cart = cart.filter((item) => item.id !== id)
+//     // displayCart(cart)
+//     console.log('clicked')
+//     displayCart(cart)
+//     console.log(cart)
+//     btn.remove()
+//     console.log(deleteBtns)
+//   })
+// })
+
+
+
+const remove = (id) => {
+    // id = parseInt(e.target.parentNode.childNodes[1].value)
+    console.log(id)
     cart = cart.filter((item) => item.id !== id)
     // displayCart(cart)
     console.log('clicked')
     displayCart(cart)
-    console.log(cart)
-    btn.remove()
-    console.log(deleteBtns)
-  })
-})
+}
 const displayCart = (items) => {
   const cartItems = document.querySelector('.items')
   cartItems.innerHTML = ''
@@ -182,7 +193,7 @@ const displayCart = (items) => {
           <div class="product-qte">x <span class="qte">${item.qte}</span></div>
   
           
-          <i class="fas fa-minus delete"></i>
+          <i class="fas fa-minus delete" onclick = "remove(${item.id})"></i>
         
       </div>
       `
