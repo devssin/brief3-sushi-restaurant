@@ -11,7 +11,7 @@
   overflow-y: scroll;
   transform: translateX(110%);
   transition: all 0.5s ease-in-out;
-  z-index: 1000;
+  padding-bottom: 6rem;
 }
 .open-cart {
   transform: translateX(0);

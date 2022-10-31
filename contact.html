@@ -74,10 +74,10 @@
         want to ask about anything or report if somthing went wrong
       </p>
 
-      <form action="">
+      <form action="" class="myForm">
         <div class="flex">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Company" />
+          <input type="text" placeholder="Name" name="name" id="name"/>
+          <input type="text" placeholder="Company" name="company" id="company"/>
         </div>
         <div>
           <input type="email" name="email" id="email" placeholder="Email" />
@@ -85,14 +85,14 @@
         <div>
           <textarea
             name="subject"
-            id=""
+            id="subject"
             cols="30"
             rows="10"
             placeholder="Subject"
           ></textarea>
         </div>
         <div class="btnContainer">
-          <button type="submit">Send Message</button>
+          <button type="submit" >Send Message</button>
         </div>
       </form>
     </section>
