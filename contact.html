@@ -21,12 +21,16 @@
     <main>
       <header>
         <div class="logo">
-          <a href="./index.html"><img src="./img/Logo (3).png" alt="sushiland logo" /></a>
+          <a href="./index.html"
+            ><img src="./img/Logo (3).png" alt="sushiland logo"
+          /></a>
         </div>
         <nav>
           <div class="nav-links">
             <div class="link">
-              <a href="./index.html"><i class="fa-solid fa-house-user"></i> Home</a>
+              <a href="./index.html"
+                ><i class="fa-solid fa-house-user"></i> Home</a
+              >
             </div>
             <div class="link">
               <a href="./about.html"
@@ -74,10 +78,15 @@
         want to ask about anything or report if somthing went wrong
       </p>
 
-      <form action="" class="myForm">
+      <form action="" id="myForm">
         <div class="flex">
-          <input type="text" placeholder="Name" name="name" id="name"/>
-          <input type="text" placeholder="Company" name="company" id="company"/>
+          <input type="text" placeholder="Name" name="name" id="name" />
+          <input
+            type="text"
+            placeholder="Company"
+            name="company"
+            id="company"
+          />
         </div>
         <div>
           <input type="email" name="email" id="email" placeholder="Email" />
@@ -92,7 +101,7 @@
           ></textarea>
         </div>
         <div class="btnContainer">
-          <button type="submit" >Send Message</button>
+          <button type="submit">Send Message</button>
         </div>
       </form>
     </section>
@@ -142,7 +151,9 @@
     <footer>
       <div class="main-footer">
         <div class="text-logo">
-          <a href="./index.html"><img src="./img/Logo (3).png" alt="sushiland logo" /></a>
+          <a href="./index.html"
+            ><img src="./img/Logo (3).png" alt="sushiland logo"
+          /></a>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
             voluptate aperiam quos sequi adipisci. Dicta eveniet expedita
@@ -214,8 +225,25 @@
         <p class="totalText">$30</p>
       </div>
     </section>
-    
 
-    <script src="./js/script.js"></script>
+    <script>
+      const myForm = document.getElementById('myForm')
+      myForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const name = document.getElementById('name').value
+        const company = document.getElementById('company').value
+        const email = document.getElementById('email').value
+        const subject = document.getElementById('subject').value
+
+        if(name == '' || company == '' || email == '' || subject == ''){
+          alert('Feildes empty')
+        }else{
+          alert('Message sent')
+        }
+
+      })
+    </script>
+
+    <script src="./js/script.js" type="text/javascript"></script>
   </body>
 </html>

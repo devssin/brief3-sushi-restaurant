@@ -1,5 +1,11 @@
 //Script for toggle the opening and closing of cart section
 let cart = JSON.parse(localStorage.getItem('cart')) || []
+const remove = (id) => {
+  cart = cart.filter((item) => item.id !== id)
+  displayCart(cart)
+  cartBtn.childNodes[3].textContent = cart.length
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
 
 const displayCart = (items) => {
   const cartItems = document.querySelector('.items')
@@ -87,6 +93,22 @@ cartBtn.addEventListener('click', () => {
 closeCartBtn.addEventListener('click', () => {
   cartSection.classList.remove('open-cart')
 })
+
+
+const selectCategories = document.getElementById('categories')
+selectCategories.onchange = () => {
+  if (selectCategories.value === 'all') {
+    displayProducts(foods)
+  } else {
+    const selectedCategories = foods.filter(
+      (food) =>
+        food.categorie.toLocaleLowerCase() ===
+        selectCategories.value.toLocaleLowerCase()
+    )
+    displayProducts(selectedCategories)
+  }
+}
+
 
 //Script for adding products to the menu
 const foods = [
@@ -227,25 +249,8 @@ addToCartBtns.forEach((btn, index) => {
   })
 })
 
-const remove = (id) => {
-  cart = cart.filter((item) => item.id !== id)
-  displayCart(cart)
-  cartBtn.childNodes[3].textContent = cart.length
-  localStorage.setItem('cart', JSON.stringify(cart))
-}
 
-const selectCategories = document.getElementById('categories')
-selectCategories.onchange = () => {
-  if (selectCategories.value === 'all') {
-    displayProducts(foods)
-  } else {
-    const selectedCategories = foods.filter(
-      (food) =>
-        food.categorie.toLocaleLowerCase() ===
-        selectCategories.value.toLocaleLowerCase()
-    )
-    displayProducts(selectedCategories)
-  }
-}
+
+
 
 
